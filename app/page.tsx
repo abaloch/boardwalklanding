@@ -23,7 +23,7 @@ export default function LandingPage() {
         <div className="flex items-center justify-center">
           <Image
             src="/../images/Color logo - no background copy.svg"
-            alt="Healthcare innovation illustration"
+            alt=""
             width={200}
             height={20}
             className="mx-auto"
@@ -38,14 +38,11 @@ export default function LandingPage() {
               <h2 className="mt-6 text-4xl font-extrabold text-gray-900">
                 Coming Soon
               </h2>
-              <p className="mt-2 text-sm text-gray-600">
-                Revolutionizing healthcare through cutting-edge AI.
-              </p>
             </div>
-            <div className="md:w-1/2">
-              <Image
-                src="/../images/undraw_medicine_b-1-ol-2.svg"
-                alt="Healthcare innovation illustration"
+            <div className="md:w-1/2 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+            <Image
+                src="/../images/undraw_search_re_x5gq.svg"
+                alt=""
                 width={400}
                 height={400}
                 className="mx-auto"
@@ -57,7 +54,7 @@ export default function LandingPage() {
 
       <footer className="py-6 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
         <p className="mt-4 text-center text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} Boardwalk Health. All rights
+          &copy; {new Date().getFullYear()} Boardwalk Search. All rights
           reserved.
         </p>
       </footer>
