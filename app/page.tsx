@@ -1,100 +1,88 @@
+"use client";
+
+import { useState } from "react";
+import { Heart, Mail, Twitter, Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
+import { Poppins } from "next/font/google";
 
-export default function Home() {
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-poppins",
+});
+
+// Custom Input component
+const Input = ({
+  className,
+  ...props
+}: {
+  className?: string;
+  [key: string]: any;
+}) => (
+  <input
+    className={`appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm ${className}`}
+    {...props}
+  />
+);
+
+export default function LandingPage() {
+  
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div
+      className={`min-h-screen flex flex-col bg-white ${poppins.variable} font-sans`}
+    >
+      <header className="py-6 px-4 sm:px-6 lg:px-8 border-b border-gray-200">
+        <div className="flex items-center justify-center">
         <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+                src="/../images/Color logo - no background copy.svg"
+                alt="Healthcare innovation illustration"
+                width={200}
+                height={20}
+                className="mx-auto"
+              />
+        </div>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <main className="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl w-full space-y-8 text-center">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="md:w-1/2 mb-8 md:mb-0">
+              <h2 className="mt-6 text-4xl font-extrabold text-gray-900">
+                Coming Soon
+              </h2>
+              <p className="mt-2 text-sm text-gray-600">
+                Revolutionizing healthcare through cutting-edge AI.
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <Image
+                src="/../images/undraw_medicine_b-1-ol-2.svg"
+                alt="Healthcare innovation illustration"
+                width={400}
+                height={400}
+                className="mx-auto"
+              />
+            </div>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="py-6 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+        <div className="flex justify-center space-x-6">
+          <a href="https://www.instagram.com/boardwalkhealth/?hl=en" className="text-gray-400 hover:text-gray-500">
+            <span className="sr-only">Twitter</span>
+            <Instagram className="h-6 w-6" aria-hidden="true" />
+          </a>
+          <a href="https://www.linkedin.com/company/boardwalk-health" className="text-gray-400 hover:text-gray-500">
+            <span className="sr-only">LinkedIn</span>
+            <Linkedin className="h-6 w-6" aria-hidden="true" />
+          </a>
+        </div>
+        <p className="mt-4 text-center text-sm text-gray-400">
+          &copy; {new Date().getFullYear()} Boardwalk Health. All rights
+          reserved.
+        </p>
       </footer>
     </div>
   );
