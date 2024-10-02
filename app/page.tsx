@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
 
@@ -11,18 +10,7 @@ const poppins = Poppins({
 });
 
 // Custom Input component
-const Input = ({
-  className,
-  ...props
-}: {
-  className?: string;
-  [key: string]: any;
-}) => (
-  <input
-    className={`appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm ${className}`}
-    {...props}
-  />
-);
+
 
 export default function LandingPage() {
   
