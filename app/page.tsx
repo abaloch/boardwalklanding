@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Heart, Mail, Twitter, Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
 
@@ -34,13 +33,13 @@ export default function LandingPage() {
     >
       <header className="py-6 px-4 sm:px-6 lg:px-8 border-b border-gray-200">
         <div className="flex items-center justify-center">
-        <Image
-                src="/../images/Color logo - no background copy.svg"
-                alt="Healthcare innovation illustration"
-                width={200}
-                height={20}
-                className="mx-auto"
-              />
+          <Image
+            src="/../images/Color logo - no background copy.svg"
+            alt="Healthcare innovation illustration"
+            width={200}
+            height={20}
+            className="mx-auto"
+          />
         </div>
       </header>
 
@@ -69,16 +68,6 @@ export default function LandingPage() {
       </main>
 
       <footer className="py-6 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
-        <div className="flex justify-center space-x-6">
-          <a href="https://www.instagram.com/boardwalkhealth/?hl=en" className="text-gray-400 hover:text-gray-500">
-            <span className="sr-only">Twitter</span>
-            <Instagram className="h-6 w-6" aria-hidden="true" />
-          </a>
-          <a href="https://www.linkedin.com/company/boardwalk-health" className="text-gray-400 hover:text-gray-500">
-            <span className="sr-only">LinkedIn</span>
-            <Linkedin className="h-6 w-6" aria-hidden="true" />
-          </a>
-        </div>
         <p className="mt-4 text-center text-sm text-gray-400">
           &copy; {new Date().getFullYear()} Boardwalk Health. All rights
           reserved.
